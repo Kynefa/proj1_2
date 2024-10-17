@@ -80,7 +80,6 @@ footer .social-icon.telegram:hover {
 }
 
 footer .social-icon.instagram {
-    /* color: rgb(255, 0, 179);*/
     color: rgb(71, 4, 43);
 }
 
@@ -207,12 +206,9 @@ footer .social-icon.instagram:hover {
     text-align: center;
 }
 
-/* Стиль для всіх елементів у випадаючому меню */
 .dropdown-menu .dropdown-item {
     color: var(--dark-color);
-    /* Змінюємо колір тексту на зелений */
     text-decoration: none;
-    /* Прибираємо підкреслення */
 }
 
 /* Стиль при наведенні на елемент */
