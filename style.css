@@ -151,16 +151,21 @@ footer .social-icon.instagram:hover {
 
 #carouselTopCharts {
     margin-top: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .carousel-item {
     height: 350px;
+    
 }
 
 .carousel-item img {
     object-fit: cover;
     height: 100%;
     width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .carousel-item .carousel-caption {
@@ -221,7 +226,10 @@ footer .social-icon.instagram:hover {
     column-count: 3;
     column-gap: 40px;
     column-rule: 1px solid var(--dark-color);
-    column-width: 100px;
+    column-width: 150px;
+    word-wrap: break-word;
+    justify-content: space-around;
+    
 }
 
 .welcome {
@@ -242,20 +250,37 @@ footer .social-icon.instagram:hover {
 
  @media (min-width: 1025px) {
    
+    body {
+        padding: 0 150px; 
+    }
     .first {
         flex-direction: row;
-         margin-left: 100px;
+        
     }
 
     .top-nav-menu {
-        justify-content: flex-end;
+        justify-content: flex-start;
+        
     }
 
     .content {
         max-width: 1200px;
         margin: 0 auto;
     }
-
+    header {
+        margin-left: var(--margin-left);
+        margin-right: var(--margin-right);
+    }
+    
+    header .flower {
+        height: 130px;
+        width: 100px;
+        margin-left: -100PX;
+    }
+    
+    header .first {
+        margin-left: 100px;
+    }
     .card {
         width: 22%;
     }
@@ -268,18 +293,30 @@ footer .social-icon.instagram:hover {
 
     .newspaper {
         text-align: justify;
+        word-wrap: break-word;
+        justify-content: space-around;
+    }
+    footer {
+        height: 60px;
+        margin-top: 30px;
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 10px;
+        display: flex;
+        justify-content: end;
     }
 }
 
 /* Планшетна версія  */
 @media (min-width: 768px) and (max-width: 1024px) {
     body {
-        padding: 0 100px; 
+        padding: 0 10px; 
     }
 
     .first {
         flex-direction: column;
         align-items: flex-start;
+        
     }
 
     .top-nav-menu {
@@ -302,7 +339,7 @@ footer .social-icon.instagram:hover {
 /* Мобільна версія (до 767px) */
 @media (max-width: 767px) {
     body {
-        padding: 0 80px; 
+        padding: 0 10px; 
     }
 
     .first {
@@ -329,6 +366,8 @@ footer .social-icon.instagram:hover {
     .newspaper {
         text-align: justify;
         padding: 10px;
+        word-wrap: break-word;
+        justify-content: space-around;
     }
 
     .welcome {
