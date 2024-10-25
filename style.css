@@ -80,7 +80,6 @@ footer .social-icon.telegram:hover {
 }
 
 footer .social-icon.instagram {
-    /* color: rgb(255, 0, 179);*/
     color: rgb(71, 4, 43);
 }
 
@@ -207,12 +206,9 @@ footer .social-icon.instagram:hover {
     text-align: center;
 }
 
-/* Стиль для всіх елементів у випадаючому меню */
 .dropdown-menu .dropdown-item {
     color: var(--dark-color);
-    /* Змінюємо колір тексту на зелений */
     text-decoration: none;
-    /* Прибираємо підкреслення */
 }
 
 /* Стиль при наведенні на елемент */
@@ -243,28 +239,107 @@ footer .social-icon.instagram:hover {
 
 
 
-/* Зміна кольору на фіолетовий при наведенні для обох */
 
-/* Медіа-запит для пів екрана (наприклад, близько 800px) 
-@media screen and (max-width: 800px) {
-  .card {
-    width: 40%;  /* Ширина збільшується, щоб наповнити пів екрану 
-    height: auto;
-  }
+ @media (min-width: 1025px) {
+   
+    .first {
+        flex-direction: row;
+         margin-left: 100px;
+    }
 
-  .topCharts {
-    display: block;  /* Відображаємо елементи один під одним для адаптивності 
-  }
+    .top-nav-menu {
+        justify-content: flex-end;
+    }
 
-  .chart {
-    width: 100%;
-    height: auto;
-  }
+    .content {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
-  img {
-    height: auto;  /* Автоматична висота для зображень 
-  }
+    .card {
+        width: 22%;
+    }
 
-  footer {
-    text-align: center;  /* Центруємо текст у футері 
-  }
+    .topCharts {
+        display: flex;
+        gap: 15px;
+        justify-content: space-around;
+    }
+
+    .newspaper {
+        text-align: justify;
+    }
+}
+
+/* Планшетна версія  */
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        padding: 0 100px; 
+    }
+
+    .first {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    .topCharts {
+        display: flex;
+        gap: 15px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+}
+
+/* Мобільна версія (до 767px) */
+@media (max-width: 767px) {
+    body {
+        padding: 0 80px; 
+    }
+
+    .first {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .top-nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .topCharts {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newspaper {
+        text-align: justify;
+        padding: 10px;
+    }
+
+    .welcome {
+        padding: 15px;
+        text-align: justify;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+}
